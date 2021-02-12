@@ -1,8 +1,8 @@
- #require pry 
+ require pry 
 
 def join_nested_strings(mixed_data)
-  
-  message = []
+  binding.pry 
+  message = ""
   row_index = 0 
   
   while row_index < mixed_data.count do 
@@ -12,20 +12,26 @@ def join_nested_strings(mixed_data)
   while element_index < mixed_data.count do 
     
     
-  message = mixed_data.class[row_index][element_index]
+    
+   if mixed_data[row_index][element_index].class
 
-element_index += 1 
+ 
 
+mixed_data[row_index][element_index]
+
+end
+message = mixed_data[row_index][element_index]
 end 
+  element_index += 1 
   
  row_index += 1
  
- #binding.pry 
+ 
  
   # src will be an Array of Arrays of Strings and Integers
   # Combine all Strings present in the AoA into a single value and return it
 end
 
-message
+#message
 
 end
